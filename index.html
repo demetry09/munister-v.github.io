@@ -1,72 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>CSS Grid</title>
-	<style>
-		* {padding: 0; margin: 0}
+<!-- saved from url=(0043)https://cdpn.io/munister-v/fullpage/rNaXqrr -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-		.wrapper {
-			display: grid;
-			grid-template-columns:repeat(3, 1fr);
-			grid-gap: 1em;
-			/* grid-auto-rows: 150px; */
-			grid-auto-rows: minmax(100px, auto);
-		}
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+<title>CodePen - New CSS Grid!</title>
+<style>
+html, body, .grid-container { height: 100%; margin: 0; }
 
-		.included {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			grid-gap: 1em;
-			grid-auto-rows: 80px;
-		}
+.grid-container * { 
+ border: 1px solid red;
+ position: relative;
+}
 
-		.wrapper > div{
-			padding: 1em;
-			background-color: #e7a158;
-		}
+.grid-container *:after { 
+ content:attr(class);
+ position: absolute;
+ top: 0;
+ left: 0;
+}
 
-		.wrapper > div.light {
-			padding: 1em;
-			background-color: #f4c3a0;
-		}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header header header header header header" "body_right_main body_right_main body_right_main body_right_main body_right_main right1" "body_right_main body_right_main body_right_main body_right_main body_right_main right2" "body_right_main body_right_main body_right_main body_right_main body_right_main right3" "body_right_main body_right_main body_right_main body_right_main body_right_main right4" "body_right_main body_right_main body_right_main body_right_main body_right_main right5" "body_right_main body_right_main body_right_main body_right_main body_right_main right6" "footer footer footer footer footer footer";
+}
 
-		.included > div {
-			background-color: #d07a09;
-		}
-	</style>
+.header { grid-area: header; }
+
+.body_right_main { grid-area: body_right_main; }
+
+.right1 { grid-area: right1; }
+
+.right2 { grid-area: right2; }
+
+.right3 { grid-area: right3; }
+
+.right4 { grid-area: right4; }
+
+.right5 { grid-area: right5; }
+
+.right6 { grid-area: right6; }
+
+.footer { grid-area: footer; }
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
 </head>
-<body>
-	<div class="wrapper">
-		<div>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-		</div>
-		<div class="light">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-		</div>
-		<div>
-			<div class="included">
-				<div>Lorem ipsum.</div>
-				<div>Lorem ipsum.</div>
-				<div>Lorem ipsum.</div>
-				<div>Lorem ipsum.</div>
-			</div>
-		</div>
-		<div class="light">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus magni atque nostrum deleniti magnam unde ad, expedita perferendis laborum aut, pariatur delectus. Deleniti dolores consequuntur sed iure ratione, laudantium exercitationem perferendis reprehenderit delectus aperiam fugiat rerum earum quidem facere aspernatur ipsam harum. Minus alias sequi inventore aspernatur expedita, odio nemo corporis consectetur labore, voluptas quasi.
-		</div>
-		<div>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-		</div>
-		<div class="light">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-		</div>
-		<div>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-		</div>
-		<div class="light">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-		</div>
-	</div>
-</body>
-</html>
+<body translate="no">
+<div class="grid-container">
+<div class="header"></div>
+<div class="body_right_main"></div>
+<div class="right1"></div>
+<div class="right2"></div>
+<div class="right3"></div>
+<div class="right4"></div>
+<div class="right5"></div>
+<div class="right6"></div>
+<div class="footer"></div>
+</div>
