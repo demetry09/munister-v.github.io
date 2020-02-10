@@ -1,0 +1,40 @@
+.zagolovok
+{
+	color: Yellow;
+        text-align: right;
+}
+
+.num_spisok
+{
+	color: DodgerBlue;
+}
+
+.paragraph
+{
+	color: Red;
+        text-align: left;
+        font-size: medium;
+	font-family: Courier;
+	text-decoration: underline;
+}
+
+body {
+    background-color: Black; 
+    color: red;
+   }
+
+.nenum_spisok
+{
+  color: Red;
+}
+
+
+.horizontal_linia
+{
+width:200px;
+text-align:left; 
+background:yellow;
+height:10px;
+border-width: 2px;
+
+}
