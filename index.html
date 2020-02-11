@@ -1,125 +1,49 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<title>Munister</title>
-
- 
- 
- 
- 
- 
- <style>
-  
- 
-@media all and (max-width: 750px) 
- { 
- {
-grid-template-areas:
-“header”
-“left1”
-“left2”
-“left3”
-“footer”;
-grid-template-rows: 80px 1fr 70px 1fr 70px;
-grid-template-columns: 1fr;
-}
-}
- 
-
-html, body, .grid-container { height: 100%; margin: 0; }
-.grid-container * { 
- border: 1px solid red;
- position: relative;
-}
-
-.grid-container *:after { 
- content:attr(class);
- position: absolute;
- top: 0;
- left: 0;
-}
-
-.grid-container {
+<title>Example</title>
+<style>
+body { 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 80px;
-  grid-template-areas: "header header header" "right_main right_main left1" "right_main right_main left2" "right_main right_main left3" "right_main right_main left4" "right_main right_main left5" "right_main right_main left6" "footer footer footer";
-}
-
-.header 
- { grid-area: header;
-   background: rgba(242,226,5,.8); 
- }
-
-.left1 { 
- grid-area: left1;
- background: gray; 
- }
-
-.left2 { 
- grid-area: left2;
- background: gray; 
- }
-
-.left3 { 
- grid-area:left3;
- background: gray; 
- }
-
-.left4 { 
- grid-area: left4;
- background: gray; 
- }
-
-.left5 {
- grid-area: left5;
- background: gray; 
- }
-
-.left6 { 
- grid-area: left6;
- background: gray; 
- }
-
-.footer { 
- grid-area: footer;
- background: DarkGoldenRod;
- 
- }
- 
-.right_main 
- { 
- grid-area: right_main;
- background: DimGrey;
- }
-
- 
-</style>
-<script>
-  window.console = window.console || function(t) {};
-</script>
-<script>
-  if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage("resize", "*");
+  grid-template-areas: 
+    "header header header"
+    "nav article ads"
+    "footer footer footer";
+  grid-template-rows: 60px 1fr 60px;
+  grid-template-columns: 20% 1fr 15%;
+  grid-gap: 10px;
+  height: 100vh;
+  margin: 0;
   }
-</script>
-</head>
-<body translate="no">
-
- <div class="grid-container">
-  <div class="header"></div>
-  <div class="left1"></div>
-  <div class="left2"></div>
-  <div class="left3"></div>
-  <div class="left4"></div>
-  <div class="left5"></div>
-  <div class="left6"></div>
-  <div class="footer"></div>
-  <div class="right_main"></div>
-</div>
+header, footer, article, nav, div {
+  padding: 20px;
+  background: gold;
+}
+#pageHeader {
+  grid-area: header;
+}
+#pageFooter {
+  grid-area: footer;
+}
+#mainArticle { 
+  grid-area: article;      
+  }
+#mainNav { 
+  grid-area: nav; 
+  }
+#siteAds 
+{ 
+  display: grid;
+  grid-template-areas: 
+  "header header header"
+  grid-area: ads; 
+  grid-template-rows: 60px 60px;
  
- 
-
-
+  }
+</style>
+<body>
+  <header id="pageHeader">Header</header>
+  <article id="mainArticle">Article</article>
+  <nav id="mainNav">Nav</nav>
+  <div id="siteAds">Ads</div>
+ <footer id="pageFooter">Footer</footer>
  
  </html>
