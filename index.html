@@ -2,7 +2,13 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>Munister</title>
-<style>
+
+ 
+ 
+ 
+ 
+ 
+ <style>
 html, body, .grid-container { height: 100%; margin: 0; }
 .grid-container * { 
  border: 1px solid red;
@@ -94,5 +100,26 @@ html, body, .grid-container { height: 100%; margin: 0; }
   <div class="footer"></div>
   <div class="right_main"></div>
 </div>
+ 
+ 
+@media all and (max-width: 750px) 
+ { 
+ {
+grid-template-areas:
+“header”
+“left1”
+“left2”
+“left3”
+“footer”;
+grid-template-rows: 80px 1fr 70px 1fr 70px;
+grid-template-columns: 1fr;
+}
+}
+ 
+ 
+ 
+ 
+ 
+ 
  
  </html>
