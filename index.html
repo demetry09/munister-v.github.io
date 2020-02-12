@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <title>Example</title>
-<style>
 
+<style>
 html, body, .grid-container { height: 100%; margin: 0; }
 
 .grid-container * { 
@@ -88,6 +88,72 @@ html, body, .grid-container { height: 100%; margin: 0; }
  { 
   grid-area: m6;
   background-color: Gray;
+  
+/* Target portrait smartphones */
+@media screen and (max-width:479px)
+{
+ .grid-container 
+ {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header" "main" " "m1" "m2" "m3" "m4" "m5" "m6" "footer";
+ } 
+   .footer 
+ { 
+ grid-area: footer;
+ background-color: Gold;
+ width: 100%;
+ }
+
+.main 
+ { 
+ grid-area: main;
+ background-color: DimGrey;
+ width: 100%;
+ }
+
+.m1 
+ { 
+  grid-area: m1;
+  background-color: Gray;
+ }
+
+.m2 
+ {
+ grid-area: m2;
+ background-color: Gray;
+ width: 100%;
+ }
+
+.m3 
+ {
+  grid-area: m3;
+  background-color: Gray;
+  width: 100%;
+ }
+
+.m4 
+ { 
+ grid-area: m4;
+ background-color: Gray;
+ width: 100%;
+ }
+
+.m5 
+ { 
+  grid-area: m5; 
+  background-color: Gray;
+  width: 100%;
+ }
+
+.m6 
+ { 
+  grid-area: m6;
+  background-color: Gray;
+  width: 100%;     
+}
+
  }
 
 </style>
