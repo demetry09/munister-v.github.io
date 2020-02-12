@@ -93,26 +93,24 @@ html, body, .grid-container { height: 100%; margin: 0; }
   
   
   
-@media only screen and (max-width: 400px)
+@media only screen and (max-width: 320px) 
 {
+.adaptive 
+ { 
+  background-color: green;
+ }
  
- .grid-container {
-  display: grid;
-  grid-template-columns: 0.6fr 1.2fr 0.8fr 0.6fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1.2fr 1fr 1.5fr 0.5fr;
-  grid-template-areas: "header header header header" "main main m1 right" "main main m2 right" "main main m3 right" "main main m4 right" "main main m5 right" "main main m6 right" "footer footer footer footer";
 }
- 
- 
- 
-  }
+  
+  
 </style>
 <body>
   <div class="grid-container">
-  <div class="header"></div> 
   <div class="left"></div>
   <div class="right"></div>
   <div class="footer"></div>
+  <div class="adaptive">
+  <div class="header"></div>
   <div class="main"></div>
   <div class="m1"></div>
   <div class="m2"></div>
@@ -120,6 +118,7 @@ html, body, .grid-container { height: 100%; margin: 0; }
   <div class="m4"></div>
   <div class="m5"></div>
   <div class="m6"></div>
+  </div>
 </div>
 </body>
 
