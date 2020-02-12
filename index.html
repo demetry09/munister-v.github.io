@@ -2,120 +2,81 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Example</title>
-
 <style>
-html, body, .grid-container { height: 100%; margin: 0; }
 
-.grid-container * { 
- border: 1px solid red;
- position: relative;
+.header,.footer {
+  background-color: Gold;
+  height: 70px;
 }
-
-.grid-container *:after { 
- content:attr(class);
- position: absolute;
- top: 0;
- left: 0;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 0.6fr 1.2fr 0.8fr 0.6fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1.2fr 1fr 1.5fr 0.5fr;
-  grid-template-areas: "header header header header" "left main m1 right" "left main m2 right" "left main m3 right" "left main m4 right" "left main m5 right" "left main m6 right" "footer footer footer footer";
-}
-
-.header 
- {
- grid-area: header; 
- background-color: Gold;
- }
-
-.left 
- { 
-  grid-area: left;
-  background-color: #49423d;
- }
-
-.right 
- { 
-  grid-area: right; 
-  background-color: #49423d;
- }
-
-.footer 
- { 
- grid-area: footer;
- background-color: Gold;
- }
-
-.main 
- { 
- grid-area: main;
- background-color: DimGrey;
- }
-
-.m1 
- { 
-  grid-area: m1;
-  background-color: Gray;
- }
-
-.m2 
- {
- grid-area: m2;
- background-color: Gray;
- }
-
-.m3 
- {
-  grid-area: m3;
-  background-color: Gray;
- }
-
-.m4 
- { 
- grid-area: m4;
- background-color: Gray;
- }
-
-.m5 
- { 
-  grid-area: m5; 
-  background-color: Gray;
- }
-
-.m6 
- { 
-  grid-area: m6;
-  background-color: Gray;
-  
-  
-  
-  
-@media only screen and (max-width: 320px) 
-{
- div.left {
-    display: none;
-  }
  
+.aside {
+  background-color: #49423d;
+}
+ 
+.main {
+  background-color: DimGrey;
+}
+ 
+.m {
+  background-color: Gray;
+}
+ 
+.header,
+.main,
+.aside,
+.m,
+.footer 
+ {
+  border: solid 1px red;
+}
+ 
+* {
+  margin: 0;
+  padding: 0;
+}
+ 
+.page 
+ {
+  max-width: 1170px;
+  margin: auto;
+}
+ 
+.grid-container 
+ {
+  display: grid;
+  grid-template-columns: 2fr 6fr 2fr 2fr;
+}
+ 
+@media screen and (max-width: 320px)
+{
+  .grid-container 
+ {
+   grid-template-columns: 1fr;
+  }
 }
     
 </style>
 <body>
-  <div class="grid-container">
-  <div class="left"></div>
-  <div class="right"></div>
-  <div class="footer"></div>
-  <div class="header"></div>
-  <div class="main"></div>
-  <div class="m1"></div>
-  <div class="m2"></div>
-  <div class="m3"></div>
-  <div class="m4"></div>
-  <div class="m5"></div>
-  <div class="m6"></div>
-</div>
+<body>
+  <div class="page">
+    <div class="header">Header</div>
+    <div class="grid-container">
+      <div class="aside">Left</div>
+      <div class="main">Main</div>
+      <div class="block">
+        <div class="m">M</div>
+        <div class="m">M</div>
+        <div class="m">M</div>
+        <div class="m">M</div>
+        <div class="m">M</div>
+        <div class="m">M</div>
+      </div>
+      <div class="aside">Right</div>
+    </div>
+    <div class="footer">Footer</div>
+  </div>
+</body>
+
 </body>
 
 </html>
