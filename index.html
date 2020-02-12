@@ -1,49 +1,66 @@
 <!DOCTYPE html>
+<html>
 <title>Example</title>
 <style>
-body { 
+
+html, body, .grid-container { height: 100%; margin: 0; }
+
+.grid-container * { 
+ border: 1px solid red;
+ position: relative;
+}
+
+.grid-container *:after { 
+ content:attr(class);
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+.grid-container {
   display: grid;
-  grid-template-areas: 
-    "header header header"
-    "nav article ads"
-    "footer footer footer";
-  grid-template-rows: 60px 1fr 60px;
-  grid-template-columns: 20% 1fr 15%;
-  grid-gap: 10px;
-  height: 100vh;
-  margin: 0;
-  }
-header, footer, article, nav, div {
-  padding: 20px;
-  background: gold;
+  grid-template-columns: 1fr 1.2fr 0.8fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1.2fr 1fr 1.5fr 0.5fr;
+  grid-template-areas: "header header header header" "left main m1 right" "left main m2 right" "left main m3 right" "left main m4 right" "left main m5 right" "left main m6 right" "footer footer footer footer";
 }
-#pageHeader {
-  grid-area: header;
-}
-#pageFooter {
-  grid-area: footer;
-}
-#mainArticle { 
-  grid-area: article;      
-  }
-#mainNav { 
-  grid-area: nav; 
-  }
-#siteAds 
-{ 
-  display: grid;
-  grid-template-areas: 
-  "header header header"
-  grid-area: ads; 
-  grid-template-rows: 60px 60px;
- 
-  }
+
+.header { grid-area: header; }
+
+.left { grid-area: left; }
+
+.right { grid-area: right; }
+
+.footer { grid-area: footer; }
+
+.main { grid-area: main; }
+
+.m1 { grid-area: m1; }
+
+.m2 { grid-area: m2; }
+
+.m3 { grid-area: m3; }
+
+.m4 { grid-area: m4; }
+
+.m5 { grid-area: m5; }
+
+.m6 { grid-area: m6; }
+
 </style>
 <body>
-  <header id="pageHeader">Header</header>
-  <article id="mainArticle">Article</article>
-  <nav id="mainNav">Nav</nav>
-  <div id="siteAds">Ads</div>
- <footer id="pageFooter">Footer</footer>
- 
- </html>
+  <div class="grid-container">
+  <div class="header"></div> 
+  <div class="left"></div>
+  <div class="right"></div>
+  <div class="footer"></div>
+  <div class="main"></div>
+  <div class="m1"></div>
+  <div class="m2"></div>
+  <div class="m3"></div>
+  <div class="m4"></div>
+  <div class="m5"></div>
+  <div class="m6"></div>
+</div>
+</body>
+
+</html>
