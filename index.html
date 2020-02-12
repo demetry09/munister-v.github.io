@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Example</title>
 
 <style>
@@ -89,8 +90,10 @@ html, body, .grid-container { height: 100%; margin: 0; }
   grid-area: m6;
   background-color: Gray;
   
-/* Target portrait smartphones */
-@media screen and (max-width:900px)
+  
+  
+  
+@media only screen and (min-width: 600px)
 {
  .grid-container 
  {
@@ -110,7 +113,73 @@ html, body, .grid-container { height: 100%; margin: 0; }
   display: none;
  }
  
+ .header 
+ {
+ grid-area: header; 
+ background-color: Gold;
  }
+
+.left 
+ { 
+  grid-area: left;
+  background-color: #49423d;
+ }
+
+.right 
+ { 
+  grid-area: right; 
+  background-color: #49423d;
+ }
+
+.footer 
+ { 
+ grid-area: footer;
+ background-color: Gold;
+ }
+
+.main 
+ { 
+ grid-area: main;
+ background-color: DimGrey;
+ }
+
+.m1 
+ { 
+  grid-area: m1;
+  background-color: Gray;
+ }
+
+.m2 
+ {
+ grid-area: m2;
+ background-color: Gray;
+ }
+
+.m3 
+ {
+  grid-area: m3;
+  background-color: Gray;
+ }
+
+.m4 
+ { 
+ grid-area: m4;
+ background-color: Gray;
+ }
+
+.m5 
+ { 
+  grid-area: m5; 
+  background-color: Gray;
+ }
+
+.m6 
+ { 
+  grid-area: m6;
+  background-color: Gray; 
+ 
+ }
+  }
   
 </style>
 <body>
