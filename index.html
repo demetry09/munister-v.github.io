@@ -7,7 +7,7 @@
 .header,
 .footer {
   background-color: Gold;
-  height: 10%;
+   height: 70px;
 }
  
 .aside {
@@ -29,6 +29,7 @@
 .m,
 .footer {
   border: solid 1px red;
+  
 }
  
 * {
@@ -43,11 +44,12 @@
  
 .grid-container {
   display: grid;
+  height:100vh;
   grid-template-columns: 2fr 6fr 2fr 2fr;
-  grid-template-rows: 10fr
 }
  
 @media screen and (max-width: 361px) {
+  height:100vh;
   .grid-container {
     grid-template-columns: 1fr;
   }
