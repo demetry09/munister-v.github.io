@@ -93,94 +93,19 @@ html, body, .grid-container { height: 100%; margin: 0; }
   
   
   
-@media only screen and (maxn-width: 400px)
+@media only screen and (max-width: 400px)
 {
- .grid-container 
- {
+ 
+ .grid-container {
   display: grid;
   grid-template-columns: 0.6fr 1.2fr 0.8fr 0.6fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1.2fr 1fr 1.5fr 0.5fr;
-  grid-template-areas: "header header header header" "left main m1 right" "left main m2 right" "left main m3 right" "left main m4 right" "left main m5 right" "left main m6 right" "footer footer footer footer";
- }
-
- .left 
- { 
-  display: none;
- }
-
-.right 
- { 
-  display: none;
- }
+  grid-template-areas: "header header header header" "main main m1 right" "main main m2 right" "main main m3 right" "main main m4 right" "main main m5 right" "main main m6 right" "footer footer footer footer";
+}
  
- .header 
- {
- grid-area: header; 
- background-color: Gold;
- }
-
-.left 
- { 
-  grid-area: left;
-  background-color: #49423d;
- }
-
-.right 
- { 
-  grid-area: right; 
-  background-color: #49423d;
- }
-
-.footer 
- { 
- grid-area: footer;
- background-color: Black;
- }
-
-.main 
- { 
- grid-area: main;
- background-color: DimGrey;
- }
-
-.m1 
- { 
-  grid-area: m1;
-  background-color: Gray;
- }
-
-.m2 
- {
- grid-area: m2;
- background-color: Gray;
- }
-
-.m3 
- {
-  grid-area: m3;
-  background-color: Gray;
- }
-
-.m4 
- { 
- grid-area: m4;
- background-color: Gray;
- }
-
-.m5 
- { 
-  grid-area: m5; 
-  background-color: Gray;
- }
-
-.m6 
- { 
-  grid-area: m6;
-  background-color: Gray; 
  
- }
+ 
   }
-  
 </style>
 <body>
   <div class="grid-container">
