@@ -51,8 +51,9 @@
 
   
   
-/* Smartphones (вертикальная) ----------- */  
-@media screen and (max-width: 361px) {
+/* Smartphones (вертикальная и горизонтальная) ----------- */  
+@media only screen and (min-width : 350px) and (max-width : 641px)
+{
   .grid-container 
   {
     grid-template-columns: 1fr;
@@ -63,18 +64,7 @@
   display: none;
    }
   
-/* Smartphones (горизонтальная) ----------- */
- @media screen and (max-width: 641px) 
-   { 
-  .grid-container 
-  {
-    grid-template-columns: 1fr;
-  }
-  
-  .aside 
-  {
-  display: none;
-   }
+
   
  
   }
