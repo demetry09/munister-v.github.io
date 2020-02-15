@@ -5,111 +5,128 @@
 <style>
 
   .header
-  { 
-  height: 8em;
-  padding: 2em 10%;      
-  }
-  
-  
-  .head_img
-  {
-  background: url(img/Header.jpg) no-repeat;
-  background-size: cover; 
-  margin-left: 25%;
-  margin-right: 25%;
-  padding: 0;
-  margin:0;
-  }
-  
-    
-.header,
-.footer {
-  background-color: Gold;
-   height: 70px;
-}
- 
-.aside {
-  background-color: #49423d;
-}
- 
-.main {
-  background-color: DimGrey;
-  
-}
- 
-.m {
-  background-color: Gray;
-   height: 16.4%;
-}
- 
-.header,
-.main,
-.aside,
-.m,
-.footer {
-  border: solid 1px red;
-  
-}
- 
-* {
-  margin: 0;
-  padding: 0;
-}
- 
-.page {
-  
-  margin: auto;
-}
- 
-.grid-container {
-  display: grid;
-  height:100vh;
-  grid-template-columns: 2fr 6fr 2fr 2fr;
-}
+    {
+        height: 8em;
+        padding: 2em 10%;
+    }
 
-  
-  
-/* Smartphones (вертикальная и горизонтальная) ----------- */  
-@media only screen and (min-width : 350px) and (max-width : 641px)
-{
-  .grid-container 
-  {
-    grid-template-columns: 1fr;
-  }
-  
-  .aside 
-  {
-  display: none;
-   }
-  
-  }
-  
-}
- 
+
+
+
+    .head_img
+    {
+        background: url(https://munister-v.github.io/img/Header.jpg) no-repeat;
+        background-size: cover;
+        width: 84%;
+        margin-right: auto;
+        margin-left: auto;
+        top: 0;
+        height: 120px;
+    }
+
+
+    .header,
+    .footer {
+        background-color: Gold;
+        height: 70px;
+    }
+
+    .aside {
+        background-color: #49423d;
+    }
+
+    .main {
+        background-color: DimGrey;
+
+    }
+
+    .m {
+        background-color: Gray;
+        height: 16.4%;
+    }
+
+    .header,
+    .main,
+    .aside,
+    .m,
+    .footer {
+        border: solid 1px red;
+
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .page {
+
+        margin: auto;
+    }
+
+    .grid-container {
+        display: grid;
+        height:100vh;
+        grid-template-columns: 2fr 6fr 2fr 2fr;
+    }
+
+
+
+    /* Smartphones (вертикальная и горизонтальная) ----------- */
+    @media only screen and (min-width : 350px) and (max-width : 641px)
+    {
+        .grid-container
+        {
+            grid-template-columns: 1fr;
+        }
+        .header
+        {
+            height: 7em;
+            padding: 0em 0%;
+        }
+        .head_img
+        {
+            background: url(https://munister-v.github.io/img/Header.jpg) no-repeat;
+            background-size: cover;
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            top: 0;
+            height: 120px;
+        }
+
+
+        .aside
+        {
+            display: none;
+        }
+
+    }
+
+    }
   
 </style>  
+<body>
+<div class="page">
+    <div class="header"><div class="head_img"></div></div>
 
- <body>
-  <div class="page">   
-    <div class="header"><div class="head_img"><img src="img/Header.jpg"></div></div>
-    
-    
+
     <div class="grid-container">
-      <div class="aside">Left</div>
-      <div class="main">Main</div>
-      <div class="block">
-        <div class="m">Поиск</div>
-        <div class="m">Свежие записи</div>
-        <div class="m">Свежие комментарии</div>
-        <div class="m">Архивы</div>
-        <div class="m">Рубрики</div>
-        <div class="m">Мета</div>
-      </div>
-      <div class="aside">Right</div>
+        <div class="aside">Left</div>
+        <div class="main">Main</div>
+        <div class="block">
+            <div class="m">Поиск</div>
+            <div class="m">Свежие записи</div>
+            <div class="m">Свежие комментарии</div>
+            <div class="m">Архивы</div>
+            <div class="m">Рубрики</div>
+            <div class="m">Мета</div>
+        </div>
+        <div class="aside">Right</div>
     </div>
-    
+
     <div class="footer">Footer</div>
-  </div>
+</div>
 </body>
 
 </html>
