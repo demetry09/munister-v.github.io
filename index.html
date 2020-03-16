@@ -95,6 +95,54 @@
 }
 	
 
+.art-nav
+{
+	position: relative;
+	height: 24px;
+	z-index: 100;
+}
+
+.art-nav .l, .art-nav .r
+{
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	height: 24px;
+	background-image: url('images/nav.png');
+}
+
+.art-nav .l
+{
+	left: 0;
+	right:0px;
+}
+
+.art-nav .r
+{
+	right: 0;
+	width: 888px;
+	clip: rect(auto, auto, auto, 888px);
+}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
     /* Smartphones (вертикальная и горизонтальная) ----------- */
     @media only screen and (min-width : 350px) and (max-width : 641px)
@@ -153,14 +201,18 @@
 
     <div class="grid-container">
         <div class="aside">Left</div>
-        <div class="main">Main
-	    
-	  <ul class="art-menu">
-		<li><a class="active" href="http://www.wpfree.ru/preview"><span class="l"></span><span class="r"></span><span class="t">Home</span></a></li><li><span class="art-menu-separator"></span></li><li class="page_item page-item-2"><a href="http://www.wpfree.ru/preview/?page_id=2" title="О сайте"><span class="l"></span><span class="r"></span><span class="t">О сайте</span></a></li><li><span class="art-menu-separator"></span></li>
-<li class="page_item page-item-15"><a href="http://www.wpfree.ru/preview/?page_id=15" title="Страница 2"><span class="l"></span><span class="r"></span><span class="t">Страница 2</span></a></li>
-	</ul>  
-	    
-	    
+        <div class="main">
+		
+		
+	<div class="art-nav">
+	<div class="l"></div>
+	<div class="r"></div>
+	<ul class="art-menu">
+	<li><a href="http://www.wpfree.ru/preview"><span class="l"></span><span class="r"></span><span class="t">Home</span></a></li><li class="page_item page-item-2"><a href="http://www.wpfree.ru/preview/?page_id=2" title="О сайте"><span class="l"></span><span class="r"></span><span class="t">О сайте</span></a></li>
+        <li class="page_item page-item-15"><a href="http://www.wpfree.ru/preview/?page_id=15" title="Страница 2"><span class="l"></span><span class="r"></span><span class="t">Страница 2</span></a></li>
+	</ul>
+        </div>
+
 	    
 	    
 	    </div>
