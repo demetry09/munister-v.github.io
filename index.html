@@ -175,6 +175,37 @@
     top: 0;
   }
 }
+	
+.art-button-wrapper .l
+{
+	left:0;
+	right:15px;
+}
+
+.art-button-wrapper .r
+{
+	width:419px;
+	right:0;
+	clip: rect(auto, auto, auto, 404px);
+}
+
+.art-button-wrapper.hover .l, .art-button-wrapper.hover .r
+{
+	top: -28px;
+}
+
+.art-button-wrapper.active .l, .art-button-wrapper.active .r
+{
+	top: -56px;
+}
+	
+	
+	
+	
+	
+	
+	
+	
  </style> 
       
 <div class="page">
@@ -197,7 +228,17 @@
 	  </div>
     <div class="block">
       <div class="m">
-	      
+	<div class="art-BlockContent-body">
+<form method="get" name="searchform" action="http://www.wpfree.ru/preview/">
+<input type="text" value="" name="s" style="width: 95%;">
+<span class="art-button-wrapper">
+	<span class="l"> </span>
+	<span class="r"> </span>
+	<input class="art-button" type="submit" name="search" value="Поиск">
+</span>
+</form>
+
+    </div>      
     
 	      
       </div>
