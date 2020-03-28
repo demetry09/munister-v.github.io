@@ -278,7 +278,29 @@ input, select
 
 /* end Button */
 
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clearfix {
+  clear: both;
+}
 
+.photo-row {
+  display: flex;
+  align-items: center;
+}
+.info-photo {
+  //float: left;
+  width: 31.6666667%;
+  height: auto;
+  max-width: 100%;
+}
+.info-photo:not(:last-child) {
+  margin-right: 2.5%;
+}
 	
 
 	
@@ -306,14 +328,22 @@ input, select
    <span class="art-PostHeader1"><a href="http://www.wpfree.ru/preview/?p=10" rel="bookmark" title="Постоянная ссылка">
    </a></span></h2></div>
 
- 
+     <div class="photo-row clearfix">
+      <img class="info-photo" src="http://millionstatusov.ru/pic/statpic/all/58e61335ec518.jpg" alt="Computer, keyboard and tablet on the table">
+      <img class="info-photo" src="http://millionstatusov.ru/pic/statpic/all/58e61335ec518.jpg" alt="Headphones, phone and notepad on the table">
+      <img class="info-photo" src="http://millionstatusov.ru/pic/statpic/all/58e61335ec518.jpg" alt="Laptop and pot on the table">
+    </div>
  
 	    
 	 
 	      
 	    
 	    
-	    
+	
+	  
+	  
+	  
+	  
 	        
 	    
 	  </div>
@@ -347,7 +377,12 @@ input, select
       </div>
       <div class="m">Свежие комментарии
 	<a href="http://www.wpfree.ru/preview/?m=200810" title="Октябрь 2019">Октябрь 2019</a>    
-	    
+	 
+	      
+	      
+	      
+	      
+	      
 	    
 	    </div>
       <div class="m">Архивы</div>
