@@ -1,0 +1,386 @@
+!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+	
+
+.menu {
+    background: linear-gradient(to bottom, #000000 0%, #696969 100%);
+    height: 50px
+}
+
+.menu ul {
+    padding: 0;
+}
+
+.menu ul:after {
+    clear: both;
+    display: table;
+    width: 100%;
+    height: 0;
+    content: ' ';
+}
+
+.menu li {
+    float: left;
+    background: url(https://help.gnome.org/users/gnome-help/stable/figures/preferences-desktop-accessibility-symbolic.svg) 7px center no-repeat;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    list-style: none;
+   
+}
+
+.menu li:hover {
+    background: url(https://help.gnome.org/users/gnome-help/stable/figures/preferences-desktop-accessibility-symbolic.svg) 7px center no-repeat #23BA15;
+}
+
+.menu a {
+    display: block;
+    padding: 0 30px;
+    line-height: 50px;
+}
+
+		
+	
+  /* ================== */
+
+.block {
+  display: flex;
+  flex-direction: column;
+}
+
+.block .m {
+  flex: 1;
+}
+
+
+/* ================== */
+
+.art-BlockContent-body {
+  justify-self: center;
+  z-index: 1;
+  padding: 11px;
+}
+
+.art-BlockContent {
+  justify-self: center;
+  z-index: 0;
+  margin: 0 auto;
+  min-width: 1px;
+  min-height: 1px;
+}
+
+.art-BlockContent-body ul {
+  list-style-type: none;
+  color: #B5B5B5;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  height: 6em;
+  background-color: #49423d;
+}
+
+.head_img {
+  background: url(https://munister-v.github.io/img/Header.jpg) no-repeat;
+  background-size: cover;
+  width: 66.67%;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0;
+  height: 135px;
+  border-radius: 10px
+}
+
+.footer {
+  background-color: Gold;
+  height: 50px;
+}
+
+.aside {
+  background-color: #49423d;
+}
+
+.main {
+  background-color: DimGrey;
+}
+
+.m {
+  background-color: Gray;
+}
+
+.header,
+.main,
+.aside,
+.m,
+.footer {
+  border: solid 1px #49423d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  margin: auto;
+}
+
+.grid-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 2fr 6fr 2fr 2fr;
+}
+
+	
+	
+
+/* Smartphones (вертикальная и горизонтальная) ----------- */
+
+@media only screen and (min-width: 350px) and (max-width: 641px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .header {
+    height: 7em;
+    padding: 0em 0%;
+  }
+	
+.footer 
+{
+display:none;
+}
+
+	
+  .head_img {
+    background: url(https://munister-v.github.io/img/Header.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    top: 0;
+    height: 120px;
+  }
+		
+  .aside {
+    display: none;
+  }
+  .art-BlockContent-body {
+    margin-right: auto;
+    justify-self: center;
+    margin-left: auto;
+    top: 0;
+  }
+}
+	
+/* begin Button */
+.art-button-wrapper .art-button
+{
+	display:inline-block;
+	width: auto;
+	outline:none;
+	border:none;
+	background:none;
+	line-height:28px;
+	margin:0 !important;
+	padding:0 !important;
+	overflow: visible;
+	cursor: default;
+	text-decoration: none !important;
+	z-index:0;
+}
+
+.art-button-wrapper
+{
+	display:inline-block;
+	position:relative;
+	height: 28px;
+	overflow:hidden;
+	white-space: nowrap;
+	width: auto;
+	z-index:0;
+}
+
+.art-button-wrapper .art-button
+{
+	display:block;
+	height: 28px;
+	font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+	font-size: 12px;
+	white-space: nowrap;
+	text-align: left;
+	padding: 0 11px !important;
+	line-height: 28px;
+	text-decoration: none !important;
+	color: #1C1C1C !important;
+}
+
+input, select
+{
+	font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+	font-size: 12px;
+}
+
+.art-button-wrapper.hover .art-button, .art-button:hover
+{
+	color: #404040 !important;
+	text-decoration: none !important;
+}
+
+.art-button-wrapper.active .art-button
+{
+	color: #F5F5F5 !important;
+}
+
+.art-button-wrapper .l, .art-button-wrapper .r
+{
+	display:block;
+	position:absolute;
+	z-index:-1;
+	height: 84px;
+	background-image: url('img/Button.png');
+}
+
+.art-button-wrapper .l
+{
+	left:0;
+	right:15px;
+}
+
+.art-button-wrapper .r
+{
+	width:419px;
+	right:0;
+	clip: rect(auto, auto, auto, 404px);
+}
+
+.art-button-wrapper.hover .l, .art-button-wrapper.hover .r
+{
+	top: -28px;
+}
+
+.art-button-wrapper.active .l, .art-button-wrapper.active .r
+{
+	top: -56px;
+}
+
+
+
+/* end Button */
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clearfix {
+  clear: both;
+}
+
+.photo-row {
+  display: flex;
+  align-items: center;
+}
+.info-photo {
+  //float: left;
+  width: 31.6666667%;
+  height: auto;
+  max-width: 100%;
+}
+.info-photo:not(:last-child) {
+  margin-right: 2.5%;
+}
+	
+
+	
+ </style> 
+      
+<div class="page">
+ <div class="header">
+    <div class="head_img">
+      <h1> munister-v.github.io
+        <h1>
+    </div>
+  </div>
+  <div class="grid-container">
+    <div class="aside"></div>
+    <div class="main">
+	  
+    <div class="menu">
+     <ul><li><a href="index.html"><font color="white">Главная</a></font></li>
+     <li><a href="news.html">Новости<font color="white"></a></font></li>
+     </ul>
+    </div>    
+	 
+	    
+   <div class="art-Post">
+   <span class="art-PostHeader1"><a href="http://www.wpfree.ru/preview/?p=10" rel="bookmark" title="Постоянная ссылка">
+   </a></span></h2></div>
+
+     <div class="photo-row clearfix">
+      <img class="info-photo" src="/img/book1.png" alt="Computer, keyboard and tablet on the table">
+      <img class="info-photo" src="/img/book2.png" alt="Headphones, phone and notepad on the table">
+      <img class="info-photo" src="/img/book3.png" alt="Laptop and pot on the table">
+    </div>
+ 	    
+	  </div>
+    <div class="block">
+      <div class="m">
+	<div class="art-BlockContent-body">
+<form method="get" name="searchform" action="http://www.wpfree.ru/preview/">
+<input type="text" value="" name="s" style="width: 95%;">
+<span class="art-button-wrapper">
+	<span class="l"> </span>
+	<span class="r"> </span>
+	<input class="art-button" type="submit" name="search" value="Поиск">
+</span>
+</form>
+
+    </div>      
+    
+	      
+      </div>
+      <div class="m">
+        <div class="art-BlockContent-body">
+          <ul>
+            <li class="cat-item cat-item-4"><a href="http://www.wpfree.ru/preview/?cat=4" title="Просмотреть все записи в рубрике WordPress">WordPress</a> (3)
+            </li>
+            <li class="cat-item cat-item-1"><a href="http://www.wpfree.ru/preview/?cat=1" title="Просмотреть все записи в рубрике Новости">Новости</a> (3)
+            </li>
+            <li class="cat-item cat-item-3"><a href="http://www.wpfree.ru/preview/?cat=3" title="Просмотреть все записи в рубрике Плагины">Плагины</a> (1)
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="m">Свежие комментарии
+	<a href="http://www.wpfree.ru/preview/?m=200810" title="Октябрь 2019">Октябрь 2019</a>    
+	 
+	      
+	      
+	      
+	      
+	      
+	    
+	    </div>
+      <div class="m">Архивы</div>
+      <div class="m">Рубрики</div>
+      <div class="m">Мета</div>
+    </div>
+    <div class="aside"></div>
+  </div>
+	 
+	 
+  <div class="footer">	     
+<h5 align="center">Copyright © 2020 - Glucksritter Munister. All Rights Reserved.</h5>	    
+    </div>
+</div>    
+	    
+	    
+	    
+	    
+	    </div>
+</div>	
+</html>
