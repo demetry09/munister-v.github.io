@@ -1,1 +1,364 @@
+.menu {
+    background: linear-gradient(to bottom, #000000 0%, #696969 100%);
+    height: 50px
+}
+
+.menu ul {
+    padding: 0;
+}
+
+.menu ul:after {
+    clear: both;
+    display: table;
+    width: 100%;
+    height: 0;
+    content: ' ';
+}
+
+.menu li {
+    float: left;
+    background: url(https://help.gnome.org/users/gnome-help/stable/figures/preferences-desktop-accessibility-symbolic.svg) 7px center no-repeat;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    list-style: none;
+   
+}
+
+.menu li:hover {
+    background: url(https://help.gnome.org/users/gnome-help/stable/figures/preferences-desktop-accessibility-symbolic.svg) 7px center no-repeat #23BA15;
+}
+
+.menu a {
+    display: block;
+    padding: 0 30px;
+    line-height: 50px;
+}
+
+		
+	
+  /* ================== */
+
+.block {
+  display: flex;
+  flex-direction: column;
+}
+
+.block .m {
+  flex: 1;
+}
+
+
+/* ================== */
+
+.art-BlockContent-body {
+  justify-self: center;
+  z-index: 1;
+  padding: 11px;
+}
+
+.art-BlockContent {
+  justify-self: center;
+  z-index: 0;
+  margin: 0 auto;
+  min-width: 6px;
+  min-height: 1px;
+}
+
+.art-BlockContent-body ul {
+  list-style-type: none;
+  color: #B5B5B5;
+  margin: 5px;
+  padding: 0;
+}
+
+.header {
+  height: 6em;
+  background-image: url('https://sun9-34.userapi.com/u0fZo1FT9ndPK3aV7iQW3-UeOf9f8xT_ocLOBQ/X8nD_k4f6X8.jpg');  
+}
+
+.head_img {
+  background: url(https://munister-v.github.io/img/Header.jpg) no-repeat;
+  background-size: cover;
+  width: 66.67%;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0;
+  height: 135px;
+  border-radius: 10px
+}
+
+.footer {
+  background-color: Gold;
+  height: 50px;
+}
+
+.aside {
+  background-image: url('https://sun1.48276.userapi.com/CCzALN_wJzDsDulrnyyJRiktR5JShmuAjIN6Iw/ZPS0Sgcw6V0.jpg');
+  opacity: 0.8;
+}
+
+.main {
+  background-color: DimGrey;
+}
+
+.m {
+ background-image: url('https://sun1.48276.userapi.com/CCzALN_wJzDsDulrnyyJRiktR5JShmuAjIN6Iw/ZPS0Sgcw6V0.jpg');
+}
+
+.header,
+.main,
+.aside,
+.m,
+.footer {
+  border: solid 1px #49423d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  margin: auto;
+}
+
+.grid-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 2fr 6fr 2fr 2fr;
+}
+
+	
+	
+
+/* Smartphones (вертикальная и горизонтальная) ----------- */
+
+@media only screen and (min-width: 350px) and (max-width: 641px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .header {
+    height: 7em;
+    padding: 0em 0%;
+  }
+	
+.footer 
+{
+display:none;
+}
+
+	
+  .head_img {
+    background: url(https://munister-v.github.io/img/Header.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    top: 0;
+    height: 120px;
+  }
+		
+  .aside {
+    display: none;
+  }
+  .art-BlockContent-body {
+    margin-right: auto;
+    justify-self: center;
+    margin-left: auto;
+    top: 0;
+  }
+}
+
+.horizontal_linia	
+{
+height: 28px;	
+}
+	
+/* begin Button */
+.art-button-wrapper .art-button
+{
+	display:inline-block;
+	width: auto;
+	outline:none;
+	border:none;
+	background:none;
+	line-height:28px;
+	margin:0 !important;
+	padding:0 !important;
+	overflow: visible;
+	cursor: default;
+	text-decoration: none !important;
+	z-index:0;
+}
+
+.art-button-wrapper
+{
+	display:inline-block;
+	position:relative;
+	height: 28px;
+	overflow:hidden;
+	white-space: nowrap;
+	width: auto;
+	z-index:0;
+}
+
+.art-button-wrapper .art-button
+{
+	display:block;
+	height: 28px;
+	font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+	font-size: 12px;
+	white-space: nowrap;
+	text-align: left;
+	padding: 0 11px !important;
+	line-height: 28px;
+	text-decoration: none !important;
+	color: #1C1C1C !important;
+}
+
+input, select
+{
+	font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+	font-size: 12px;
+}
+
+.art-button-wrapper.hover .art-button, .art-button:hover
+{
+	color: #404040 !important;
+	text-decoration: none !important;
+}
+
+.art-button-wrapper.active .art-button
+{
+	color: #F5F5F5 !important;
+}
+
+.art-button-wrapper .l, .art-button-wrapper .r
+{
+	display:block;
+	position:absolute;
+	z-index:-1;
+	height: 84px;
+	background-image: url('img/Button.png');
+}
+
+.art-button-wrapper .l
+{
+	left:0;
+	right:15px;
+}
+
+.art-button-wrapper .r
+{
+	width:419px;
+	right:0;
+	clip: rect(auto, auto, auto, 404px);
+}
+
+.art-button-wrapper.hover .l, .art-button-wrapper.hover .r
+{
+	top: -28px;
+}
+
+.art-button-wrapper.active .l, .art-button-wrapper.active .r
+{
+	top: -56px;
+}
+
+
+
+/* end Button */
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clearfix {
+  clear: both;
+}
+
+.photo-row {
+  display: flex;
+  align-items: center;
+}
+.info-photo {
+  //float: left;
+  width: 31.6666667%;
+  height: auto;
+  max-width: 100%;
+}
+.info-photo:not(:last-child) {
+  margin-right: 2.5%;
+}
+
+	
+.horizontal_linia
+ {
+height: 12px;
+border: 0;
+box-shadow: inset 0 15px 12px -11px rgba(0,0,0,0.15);
+}
+		
+.paragraph-class {
+ 
+    text-indent: 20px;
+    text-align: justify;
+    padding: 10px;
+}
+
+	.bloginfo {
+    background: #474747;
+   border: 1px solid #000000;
+   padding: 3px 5px 3px 10px;
+    margin: 11px;
+    text-align: justify;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 5px;
+ -o-border-radius: 5px;
+ -khtml-border-radius: 5px;
+ border-radius: 5px;
+
+
+}
+/* оформление заголовка блока */
+.bloginfo-head {
+    font-size:1.4em;
+    font-weight: bold;
+    color:#BDB76B;
+   margin: 0 0 5px 0;
+}
+/* оформление текста блока */
+.bloginfo-txt {
+    line-height: 1.3em;
+    color:#F0E68C;
+   font-size:14px;
+ }
+
+a:link {
+  color: #F0E68C; 
+  
+}
+a:visited {
+  color: #F0E68C;
+}
+a:hover {
+  color: #F0E68C; 
+ 
+}
+a:active {
+  color: #497DDD; 
+  border-bottom: 1px dashed;
+}
+
+.post-95 
+	{
+    font-size:1.2em;
+    font-weight: bold;
+    color:#BDB76B;
+   margin: 0 0 5px 0;
+	}	
+	
+
 
